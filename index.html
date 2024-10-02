@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Weather Dashboard</title>
+</head>
+
+<body>
+  <header class="header" id="hdrtext">
+    <h1><strong>Weather Dashboard</strong></h1>
+  </header>
+
+  <main>
+    <form id="weatherForm">
+      <h1><strong>Search for a City</strong></h1>
+      <div><input type="text" id="cityInput" /></div>
+      <button type="search" id="search"><strong>Search</strong></button>
+      <div class="cityList">
+        <div class="userList" onclick="document.getElementById('cityInput').value = this.innerHTML;">Atlanta</div>
+        <div class="userList" onclick="document.getElementById('cityInput').value = this.innerHTML;">Denver</div>
+        <div class="userList" onclick="document.getElementById('cityInput').value = this.innerHTML;">Seattle</div>
+        <div class="userList" onclick="document.getElementById('cityInput').value = this.innerHTML;">San Francisco</div>
+        <div class="userList" onclick="document.getElementById('cityInput').value = this.innerHTML;">Orlando</div>
+        <div class="userList" onclick="document.getElementById('cityInput').value = this.innerHTML;">New York</div>
+        <div class="userList" onclick="document.getElementById('cityInput').value = this.innerHTML;">Chicago</div>
+        <div class="userList" onclick="document.getElementById('cityInput').value = this.innerHTML;">Austin</div>
+      </div>
+    </form>
+    <section class="weatherContainer">
+      <div class="current-weather-container">
+      </div>
+      <h2 id="forcastHeader"><strong>5-Day Forecast:</strong></h2>
+      <div class="future-weather-container">
+      </div>
+    </secion>
+  </main>
+</body>
+<script src="./js/script.js"></script>
+
+</html>
