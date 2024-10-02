@@ -28,7 +28,7 @@ async function getCurrentWeatherData(lat, lon) {
 
 async function getLatAndLonData(city) {
   const response = await fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${apiKey}`
+    `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${apiKey}`
   );
   const latLonData = await response.json();
   console.log({ latLonData });
@@ -52,7 +52,7 @@ function createCurrentWeatherCard(data) {
   const temp = data.main.temp;
   const humidity = data.main.humidity;
   const wind = data.wind.speed;
-  const icon = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+  const icon = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
 
   const container = document.createElement("div");
 
@@ -91,7 +91,7 @@ function createFutureWeatherCard(data) {
     const temp = data.list[i].main.temp;
     const humidity = data.list[i].main.humidity;
     const wind = data.list[i].wind.speed;
-    const icon = `http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png`;
+    const icon = `https://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png`;
 
     const container = document.createElement("div");
     container.classList.add("weather-card");
